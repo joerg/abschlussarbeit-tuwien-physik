@@ -1,0 +1,29 @@
+\documentclass[12pt,a4paper,twoside,BCOR=10mm]{scrreprt}
+% ### BCOR=10mm Bindcorrection
+\input{header.tex}
+\input{titlepage.tex}
+
+\begin{document}
+
+\AbschlussarbeitTUWienPhysikTitlePage{
+	autor=Wonderwoman,
+	titel={Investigation of mysterious invisible planes, in the aspect of people with special needs like engeneers and drug addicts... yeah, espacially drug addicts},
+	institut=Atominstitut,
+	prof=Gerald Badurek,
+	adresse={Wiedner Hauptstrasse 8-10, Turm C,\\ 1. Stock, Raum 123A/124A}
+	}
+
+\titleTUWienPhysikDiplomarbeit
+
+\tableofcontents
+\newpage
+
+\input{abstract.tex}
+\input{chapter01.tex}
+\input{thanks.tex}
+
+\pagenumbering{roman}
+\bibliographystyle{plainnat}
+\bibliography{bib/example}
+
+\end{document}

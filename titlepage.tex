@@ -1,0 +1,82 @@
+\makeatletter
+\define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{autor}[Max Mustermann]{}
+\define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{titel}[Titel]{}
+\define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{institut}[Institut]{}
+\define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{prof}[Professor]{}
+\define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{adresse}[Adresse]{}
+\newcommand{\AbschlussarbeitTUWienPhysikTitlePage}[1]{\setkeys{AbschlussarbeitTUWienPhysikTitlePage}{#1}}
+
+% Default Werte für die Variablen
+\setkeys{AbschlussarbeitTUWienPhysikTitlePage}{
+	autor=Max Mustermann,
+	titel=Titel,
+	institut=Institut,
+	prof=Professor,
+	adresse=Adresse des Autors
+}{}
+
+\newcommand*{\titleTUWienPhysikDiplomarbeit}{
+	\begingroup % Create the command for including the title page in the document
+	\newgeometry{bottom=2cm, top=2cm}
+	\begin{titlepage}
+	
+	
+	\begin{tabular}{ >{\centering}p{9cm} >{\centering}p{7cm} }
+		\space & {\line(1,0){120}\\Unterschrift Betreuer}
+	\end{tabular}
+	
+	\begin{center}
+	
+	% Upper part of the page
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{figures/TULogo.png}
+		 %Logo gracefully taken from http://www.tuwien.ac.at/dle/pr/publishing_web_print/corporate_design/tu_logo/
+	\end{figure}
+	
+	\vspace{\stretch{1}}
+	\begin{LARGE}
+
+	DIPLOMARBEIT
+
+	\vspace{\stretch{1.8}}
+
+	\textbf{\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@titel} \\
+
+	\end{LARGE}
+	
+	\vspace{\stretch{1.8}}
+	\begin{large}
+	Ausgef\"uhrt am \cmdKV@AbschlussarbeitTUWienPhysikTitlePage@institut \\ 
+	der Technischen Universit\"at Wien
+	
+	\vspace{\stretch{0.8}}
+	
+	Unter der Anleitung von \\ 
+	\textbf{\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@prof}
+	
+	\vspace{\stretch{1}}
+	
+	durch \\
+	
+	\vspace{\stretch{0.3}}
+	
+	\textbf{\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@autor} \\
+	
+	\vspace{\stretch{0.6}}
+	
+	\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@adresse \\
+	
+	\vspace{\stretch{1.4}}
+	
+	\begin{tabular}{ >{\centering}p{7cm} >{\centering}p{7cm} }
+	\centering
+	\today & \line(1,0){120}
+	\end{tabular}
+	\end{large}
+	
+	\end{center}
+	\end{titlepage}
+	\restoregeometry
+	\endgroup
+}
