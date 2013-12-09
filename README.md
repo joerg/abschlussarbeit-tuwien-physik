@@ -13,7 +13,7 @@ Danksagung
 ==========
 Besten Dank an Robert Hollenstein und im weiteren Manfred Menhart und Joachim Jeitler für die Vorlagen zu diesem Projekt.
 
-[1]: http://git-scm.com/	"GIT"
-[2]: http://git-scm.com/book	"GIT Book"
-[3]: https://github.com/joerg/abschlussarbeit-tuwien-physik	"Abschlussarbeit TU-Wien Physik Template"
-[4]: https://github.com/joerg/abschlussarbeit-tuwien-physik/issues	"Bugtracker"
+[1]: http://git-scm.com/
+[2]: http://git-scm.com/book
+[3]: https://github.com/joerg/abschlussarbeit-tuwien-physik
+[4]: https://github.com/joerg/abschlussarbeit-tuwien-physik/issues
