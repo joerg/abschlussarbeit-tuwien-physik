@@ -1,18 +1,17 @@
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-% Anzeigen der Seitenränder. Nützlich für debugging.
-%\usepackage[showframe,paper=a4paper,margin=1in]{geometry}% http://ctan.org/pkg/geometry
-%\setlength{\headheight}{15pt}
-\usepackage[pdftex]{hyperref}
+\usepackage[utf8]{inputenc} % Richtiges anzeigen von Umlauten und quasi allen anderen Schriftzeichen
+\usepackage{amsmath} % Bessere und schönere mathematische Formeln
+\usepackage{amsfonts} % Erweiterte Zeichensätze für mathematische Formeln
+\usepackage{amssymb} % Spezielle mathematische Symbole.
+\usepackage{array} % Matrizen in mathematischen Formeln
 
-% Bibliography, see http://merkel.zoneo.net/Latex/natbib.php
-\usepackage[numbers,sort&compress]{natbib}
+%\usepackage[showframe,paper=a4paper,margin=1in]{geometry} % Anzeigen der Seitenränder, nützlich für debugging. http://ctan.org/pkg/geometry
 
-\usepackage{xkeyval}
-\usepackage{array}
-\usepackage{graphicx}
-\usepackage{geometry}
+\usepackage[pdftex]{hyperref} % Links richtig anzeigen. Sowohl innerhalb des Dokuments (Fußzeilen, Formeln), als auch ins Internet
+\usepackage[bottom]{footmisc} % Zwingt Fußnoten an das Ende der Seite
+\usepackage[numbers,sort&compress]{natbib} % Bibliography, see http://merkel.zoneo.net/Latex/natbib.php
 
-\newcommand{\writeIn}[1]{\usepackage[#1]{babel}}
+\usepackage{xkeyval} % Erlaubt "Variablen" zu definieren, wird für Titelseite gebraucht
+\usepackage{graphicx} % Wichtig für das Einbinden von Grafiken
+\usepackage{geometry} % Seitenränder und Seiteneigenschaften setzen
+
+\newcommand{\writeIn}[1]{\usepackage[#1]{babel}} % Definiert einen neuen Befehl um die Sprache des Dokuments zu setzen

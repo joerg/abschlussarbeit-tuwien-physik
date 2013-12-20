@@ -1,25 +1,24 @@
-\documentclass[12pt,a4paper,twoside,BCOR=10mm]{scrreprt}
-% ### BCOR=10mm Bindcorrection
+\documentclass[12pt,a4paper,twoside,BCOR=10mm]{scrreprt} % Schriftgröße, Seitenformat, Zweiseitig für Seitenränder, Bindcorrection
 \input{header.tex}
 \input{titlepage.tex}
-\writeIn{german}
+\writeIn{german} % Siehe header.tex. Setzt Dokumentsprache und damit Sprache von "Abstract", "Inhaltsverzeichnis", Datumsangaben etc.
 
-\hypersetup{
+\hypersetup{ % Setzt einige Werte die in den Eigenschaften des PDF gespeichert sind.
 	pdfauthor = {Wonderwoman},
 	pdftitle = {Investigation of mysterious invisible planes},
 	pdfsubject = {Diplomarbeit Physik},
 	pdfkeywords = {diplom, master},
 	pdfdisplaydoctitle = true,
-	colorlinks = false, % ### set to false for printing
+	colorlinks = false, % Für Druck auf "false" setzen!
 }
 
 \begin{document}
 
 \AbschlussarbeitTUWienPhysikTitlePage{
-	autor=Wonderwoman,
-	titel={Investigation of mysterious invisible planes, in the aspect of people with special needs like engeneers and drug addicts... yeah, espacially drug addicts},
+	titel={Investigation of mysterious invisible planes, in the aspect transparent aluminium and active noise control using plasma speakers},
 	institut=Atominstitut,
-	prof=Gerald Badurek,
+	prof={Prof. DI Dr. Gerald Badurek},
+	autor=Wonderwoman,
 	adresse={Wiedner Hauptstrasse 8-10, Turm C,\\ 1. Stock, Raum 123A/124A}
 	}
 
@@ -33,7 +32,7 @@
 
 \pagenumbering{roman}
 \bibliographystyle{unsrtnat}
-\bibliography{bib/example}
+\bibliography{bib/example} % Erstellt Bibliographie aus der Datei bib/example.bib
 \input{thanks.tex}
 
 \end{document}
