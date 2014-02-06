@@ -9,9 +9,12 @@ Entwicklung
 Erweiterungen für Bacc- und Projektarbeiten sowie Dissertationen sind natürlich leicht möglich, jedoch nicht von mir geplant. Natürlich sind alle Änderungswünsche und Erweiterungen gerne gesehen und werden, sofern sinnvoll und gut, in das Projekt eingepflegt.
 GIT Pull requests bzw. Einträge im [Bugtracker] [4] werden bevorzugt. Alternativ kann man mir auch eine Mail mit den Vorschlägen schicken, an joerg.herzinger@oiml.at
 
+Sprache
+=======
+Laut Studienplan §9 muss jede Abschlussarbeit "Diplomarbeit" genannt werden, deshalb gibt es hier keine Unterscheidung bei den Sprachen. Man dürfte als "zweite Seite" eine englische Titelseite anlegen in der es dann "Diploma Thesis" heißen muss.
+
 ToDo
 ====
-* Unterscheidung Masterarbeit und Diplomarbeit. Dafür sollte man noch eine endgültige Entscheidung vom Dekanat abwarten.
 * Vorlagen für Bacc- und Projektarbeiten, eventuell auch für Dissertationen.
 
 Danksagung
