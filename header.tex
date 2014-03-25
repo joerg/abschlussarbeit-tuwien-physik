@@ -1,10 +1,11 @@
 \usepackage[utf8]{inputenc} % Richtiges anzeigen von Umlauten und quasi allen anderen Schriftzeichen
 \usepackage[T1]{fontenc} % Wichtig für alles was mehr als ASCII verwendet
+\usepackage{csquotes} % Schöne Anführungsstriche mit \enquote{Text}
 \usepackage{amsmath} % Bessere und schönere mathematische Formeln
 \usepackage{amsfonts} % Erweiterte Zeichensätze für mathematische Formeln
 \usepackage{amssymb} % Spezielle mathematische Symbole.
 \usepackage{array} % Matrizen in mathematischen Formeln
-\usepackage{textcomp} % Für textmu und textohm etc.
+\usepackage{textcomp} % Für textmu und textohm etc. um im Fließtext keine Mathematik 
 
 \usepackage[version=3]{mhchem} % Für Chemische Formeln
 \usepackage{braket} % Für das quantenmechanische Bra-Ket
@@ -13,10 +14,23 @@
 
 \usepackage[pdftex]{hyperref} % Links richtig anzeigen. Sowohl innerhalb des Dokuments (Fußzeilen, Formeln), als auch ins Internet
 \usepackage[bottom]{footmisc} % Zwingt Fußnoten an das Ende der Seite
-\usepackage[numbers,sort&compress]{natbib} % Bibliography, see http://merkel.zoneo.net/Latex/natbib.php
+
+\usepackage[ % Biblatex für die Zitate und Referenzen
+	backend=biber,
+	hyperref=true
+		]{biblatex}
 
 \usepackage{xkeyval} % Erlaubt "Variablen" zu definieren, wird für Titelseite gebraucht
 \usepackage{graphicx} % Wichtig für das Einbinden von Grafiken
+\usepackage{caption}
+\usepackage{subcaption} % Einbinden von mehreren Grafiken in einer figure
 \usepackage{geometry} % Seitenränder und Seiteneigenschaften setzen
 
 \newcommand{\writeIn}[1]{\usepackage[#1]{babel}} % Definiert einen neuen Befehl um die Sprache des Dokuments zu setzen
+
+\usepackage[usenames,dvipsnames]{color} % Farben für den todo Befehl
+\newcommand{\todo}[1]{{\color{Cerulean}(TODO: #1)}} % Einfach \todo{Text} verwenden!
+
+\usepackage{dirtree} % Erlaubt das erstellen von Dateibäumen
+% \dirtreecomment{Text} erstellt einen Kommentar zu dem Verzeichnis bzw. der Datei
+\newcommand{\dirtreecomment}[1]{\dotfill{} \begin{minipage}[t]{0.5\textwidth}#1\end{minipage}}

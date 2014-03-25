@@ -10,4 +10,17 @@ Wikibooks: \url{http://en.wikibooks.org/wiki/LaTeX/}
 Als Editor empfehle ich TexMaker, da er für alle Betriebssysteme verfügbar ist und einige sehr angenehme Funktionen bietet.
 \begin{center}\url{http://www.xm1math.net/texmaker/}\end{center}
 
+Um dieses Dokument mit TexMaker kompilieren zu können sind folgende Einstellungen in Optionen -> Texmaker nötig:
+\begin{itemize}
+\item Die Option \enquote{Bib(la)tex} auf die biber.exe setzen. Diese sollte unter Windows irgendwo im Installationsordner von MikTex sein.
+\item Unter \enquote{Quick Build} die User Option nehmen und mit dem Wizard die Reihenfolge
+	\begin{enumerate}
+	\item PdfLaTeX
+	\item BibTex
+	\item PdfLaTeX
+	\item PdfLaTeX
+	\item Pdf Viewer	
+	\end{enumerate}
+\end{itemize}
+Damit kann die Option Quick Build komfortabel genutzt werden.
 \newpage

@@ -11,13 +11,13 @@
 	pdfdisplaydoctitle = true,
 	colorlinks = false, % Für Druck auf "false" setzen!
 }
-
+\addbibresource{bib/example.bib}
 \begin{document}
 
 \AbschlussarbeitTUWienPhysikTitlePage{
-	titel={Investigation of mysterious invisible planes, in the aspect transparent aluminium and active noise control using plasma speakers},
+	titel={Investigation of mysterious invisible planes},
 	institut=Atominstitut,
-	prof={Prof. DI Dr. Gerald Badurek},
+	prof={\citeauthor{PersonBadurek}},
 	autor=Wonderwoman,
 	adresse={Wiedner Hauptstrasse 8-10, Turm C,\\ 1. Stock, Raum 123A/124A}
 	}
@@ -31,8 +31,7 @@
 \input{chapter01.tex}
 
 \pagenumbering{roman}
-\bibliographystyle{unsrtnat}
-\bibliography{bib/example} % Erstellt Bibliographie aus der Datei bib/example.bib
+\printbibliography
 \input{thanks.tex}
 
 \end{document}

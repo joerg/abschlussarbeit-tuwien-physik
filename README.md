@@ -2,7 +2,7 @@ Verwendung
 ==========
 Ich möchte allen wärmstens ans Herz legen [GIT] [1] zu verwenden, und das frei verfügbare [Buch] [2] dazu zu lesen. Für diejenigen denen dies zu aufwendig ist gibt auf der [Projekthomepage] [3] einen direkten Downloadlink.
 Ein vollständiges Beispiel ist in abschlussarbeit.tex gegeben. Meine Empfehlung wäre dieses direkt als Skelett für die eigene Arbeit zu verwenden.
-Beim erstellen der PDF nicht vergessen zuerst BibTex zu kompilieren und dann mindestens zwei mal PDFLatex.
+Beim erstellen der PDF nicht vergessen zuerst BibTex zu kompilieren und dann mindestens zwei mal PDFLatex. Eine etwas ausführlichere Beschreibung findet sich in der abschlussarbeit.pdf Datei.
 
 Entwicklung
 ===========
