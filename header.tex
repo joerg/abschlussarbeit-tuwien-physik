@@ -12,7 +12,8 @@
 \usepackage[version=3]{mhchem} % Für Chemische Formeln
 \usepackage{braket} % Für das quantenmechanische Bra-Ket
 
-%\usepackage[showframe,paper=a4paper,margin=1in]{geometry} % Anzeigen der Seitenränder, nützlich für debugging. http://ctan.org/pkg/geometry
+\usepackage{geometry} % Seitenränder und Seiteneigenschaften setzen
+%\usepackage[showframe]{geometry} % Anzeigen der Seitenränder, nützlich für debugging. http://ctan.org/pkg/geometry
 
 \usepackage[bottom]{footmisc} % Zwingt Fußnoten an das Ende der Seite
 \usepackage[pdftex]{hyperref} % Links richtig anzeigen. Sowohl innerhalb des Dokuments (Fußzeilen, Formeln), als auch ins Internet
@@ -26,12 +27,6 @@
 \usepackage{graphicx} % Wichtig für das Einbinden von Grafiken
 \usepackage{caption}
 \usepackage{subcaption} % Einbinden von mehreren Grafiken in einer figure
-\usepackage{geometry} % Seitenränder und Seiteneigenschaften setzen
-
-\newcommand{\writeIn}[1]{\usepackage[#1]{babel}} % Definiert einen neuen Befehl um die Sprache des Dokuments zu setzen
-
-\usepackage[usenames,dvipsnames]{color} % Farben für den todo Befehl
-\newcommand{\todo}[1]{{\color{Cerulean}(TODO: #1)}} % Einfach \todo{Text} verwenden!
 
 \usepackage{dirtree} % Erlaubt das erstellen von Dateibäumen
 % \dirtreecomment{Text} erstellt einen Kommentar zu dem Verzeichnis bzw. der Datei
@@ -40,3 +35,10 @@
 \usepackage{fancyvrb} % Mehr Optionen für Verbatim
 \usepackage{listings} % Zur Darstellung von Programmcode
 \usepackage{pdflscape} % Querformat Seiten
+
+\newcommand{\writeIn}[1]{\usepackage[#1]{babel}} % Definiert einen neuen Befehl um die Sprache des Dokuments zu setzen
+
+\usepackage[usenames,dvipsnames]{color} % Farben für den todo Befehl
+\newcommand{\todo}[1]{{\color{Cerulean}(TODO: #1)}} % Einfach \todo{Text} verwenden!
+
+\newcommand{\blankpage}{ \newpage \thispagestyle{empty} \mbox{} \newpage }
