@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,twoside,BCOR=10mm]{scrreprt} % Schriftgröße, Seitenformat, Zweiseitig für Seitenränder, Bindcorrection
+\documentclass[12pt,a4paper,twoside,BCOR=10mm,openright,bibliography=totoc]{scrreprt} % Schriftgröße, Seitenformat, Zweiseitig für Seitenränder, Bindcorrection
 \input{header.tex}
 \input{titlepage.tex}
 \writeIn{german} % Siehe header.tex. Setzt Dokumentsprache und damit Sprache von "Abstract", "Inhaltsverzeichnis", Datumsangaben etc.
@@ -17,12 +17,16 @@
 \AbschlussarbeitTUWienPhysikTitlePage{
 	titel={Investigation of mysterious invisible planes},
 	institut=Atominstitut,
-	prof={\citeauthor{PersonBadurek}},
+	prof={\citeauthor{PersonBadurek}}, % citeauthor nimmt Namen der Person aus der Bibliography in bib/example.bib
 	autor=Wonderwoman,
 	adresse={Wiedner Hauptstrasse 8-10, Turm C,\\ 1. Stock, Raum 123A/124A}
+	typ=dipl
+	% Vordefinierte Typen sind: sem (Seminararbeit), bacc (Bachelorarbeit), proj (Projektarbeit), mast (Diplomarbeit), dipl (Diplomarbeit), diss (Dissertation)
+	% Laut Auskunft des Dekants muss auch eine Masterarbeit den Titel "Diplomarbeit" tragen.
+	% Bei allen anderen Typen werden die Texte direkt übernommen.
 	}
 
-\titleTUWienPhysikDiplomarbeit
+\titlePageTUWienPhysik
 
 \blankpage
 

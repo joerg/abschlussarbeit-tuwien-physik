@@ -4,6 +4,7 @@
 \define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{institut}[Institut]{}
 \define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{prof}[Professor]{}
 \define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{adresse}[Adresse]{}
+\define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{typ}[Typ der Arbeit]{}
 \newcommand{\AbschlussarbeitTUWienPhysikTitlePage}[1]{\setkeys{AbschlussarbeitTUWienPhysikTitlePage}{#1}}
 
 % Default Werte für die Variablen
@@ -12,10 +13,11 @@
 	titel=Titel,
 	institut=Institut,
 	prof=Professor,
-	adresse=Adresse des Autors
+	adresse=Adresse des Autors,
+	typ=bacc
 }{}
 
-\newcommand*{\titleTUWienPhysikDiplomarbeit}{
+\newcommand*{\titlePageTUWienPhysik}{
 	\begingroup % Create the command for including the title page in the document
 	\newgeometry{bottom=2cm, top=2cm, left=3cm, right=2cm}
 	\begin{titlepage}
@@ -37,7 +39,15 @@
 	\vspace{\stretch{1}}
 	\begin{LARGE}
 
-	DIPLOMARBEIT
+	\par\noindent%
+	 \IfEqCase*{\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@typ}{%
+	  {sem}{SEMINARARBEIT}%
+	  {bacc}{BACHELORARBEIT}%
+	  {proj}{PROJEKTARBEIT}%
+	  {mast}{DIPLOMARBEIT}% Laut Auskunft Dekanat muss auch eine Masterarbeit DIPLOMARBEIT heißen
+	  {dipl}{DIPLOMARBEIT}%
+	  {diss}{DISSERTATION}%
+	  }[\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@typ]
 
 	\vspace{\stretch{1.8}}
 
@@ -47,8 +57,8 @@
 	
 	\vspace{\stretch{1.8}}
 	\begin{large}
-	Ausgef\"uhrt am \cmdKV@AbschlussarbeitTUWienPhysikTitlePage@institut \\ 
-	der Technischen Universit\"at Wien
+	Ausgeführt am \cmdKV@AbschlussarbeitTUWienPhysikTitlePage@institut \\
+	der Technischen Universität Wien
 	
 	\vspace{\stretch{0.5}}
 	
