@@ -19,11 +19,12 @@
 	institut=Atominstitut,
 	prof={\citeauthor{PersonBadurek}}, % citeauthor nimmt Namen der Person aus der Bibliography in bib/example.bib
 	autor=Wonderwoman,
-	adresse={Wiedner Hauptstrasse 8-10, Turm C,\\ 1. Stock, Raum 123A/124A}
-	typ=dipl
+	adresse={Wiedner Hauptstrasse 8-10, Turm C,\\ 1. Stock, Raum 123A/124A},
+	typ={dipl},
 	% Vordefinierte Typen sind: sem (Seminararbeit), bacc (Bachelorarbeit), proj (Projektarbeit), mast (Diplomarbeit), dipl (Diplomarbeit), diss (Dissertation)
 	% Laut Auskunft des Dekants muss auch eine Masterarbeit den Titel "Diplomarbeit" tragen.
 	% Bei allen anderen Typen werden die Texte direkt übernommen.
+	schwarzweisslogo=false % Definiert, ob das Logo der TU in Schwarz-Weiß oder Farbe ist.
 	}
 
 \titlePageTUWienPhysik
@@ -32,11 +33,12 @@
 
 \input{abstract.tex}
 \tableofcontents \newpage
-\pagenumbering{arabic} \setcounter{page}{1}
+\pagenumbering{arabic} \setcounter{page}{0}
 
-\input{chapter01.tex}
+\input{chapterTippsUndTricks.tex}
+\input{chapterBeispiel.tex}
 
-\pagenumbering{roman}
+\pagenumbering{roman} \setcounter{page}{0}
 \printbibliography
 \input{thanks.tex}
 

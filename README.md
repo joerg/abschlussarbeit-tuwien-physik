@@ -1,3 +1,8 @@
+Umfang
+======
+Diese Vorlage ist prinzipiell für alle Arbeiten auf der Fakultät Physik der Technische Universität Wien geeignet. Angelehnt ist die Titelseite an die Vorlage für Diplomarbeiten die vom Dekanat herausgegeben wurde. Speziell vorgesehen sind Seminararbeiten, Bachelorarbeiten, Projektarbeiten, Diplom- und Masterarbeiten sowie Dissertationen. Laut Auskunft des Dekants müssen auch Masterarbeiten den Titel "Diplomarbeit" tragen, deshalb liefern diese beiden Optionen das selbe Endergebnis.
+Wenn diese Auswahl nicht reicht, kann man den Titel auch sehr leicht selbst definieren.
+
 Verwendung
 ==========
 Ich möchte allen wärmstens ans Herz legen [GIT] [1] zu verwenden, und das frei verfügbare [Buch] [2] dazu zu lesen. Für diejenigen denen dies zu aufwendig ist gibt auf der [Projekthomepage] [3] einen direkten Downloadlink.
@@ -6,16 +11,16 @@ Beim erstellen der PDF nicht vergessen zuerst BibTex zu kompilieren und dann min
 
 Entwicklung
 ===========
-Erweiterungen für Bacc- und Projektarbeiten sowie Dissertationen sind natürlich leicht möglich, jedoch nicht von mir geplant. Natürlich sind alle Änderungswünsche und Erweiterungen gerne gesehen und werden, sofern sinnvoll und gut, in das Projekt eingepflegt.
+Natürlich sind alle Änderungswünsche und Erweiterungen gerne gesehen und werden, sofern sinnvoll und gut, in das Projekt eingepflegt.
 GIT Pull requests bzw. Einträge im [Bugtracker] [4] werden bevorzugt. Alternativ kann man mir auch eine Mail mit den Vorschlägen schicken, an joerg.herzinger@oiml.at
 
 Sprache
 =======
-Laut Studienplan §9 muss jede Abschlussarbeit "Diplomarbeit" genannt werden, deshalb gibt es hier keine Unterscheidung bei den Sprachen. Man dürfte als "zweite Seite" eine englische Titelseite anlegen in der es dann "Diploma Thesis" heißen muss.
+Laut Studienplan §9 muss jede Abschlussarbeit "Diplomarbeit" genannt werden, deshalb gibt es hier keine Unterscheidung bei den Sprachen. Man dürfte als "zweite Seite" eine englische Titelseite anlegen in der es dann "Diploma Thesis" heißen muss. (Auskunft des Dekanats)
 
 ToDo
 ====
-* Vorlagen für Bacc- und Projektarbeiten, eventuell auch für Dissertationen.
+* ~~Vorlagen für Bacc- und Projektarbeiten, eventuell auch für Dissertationen.~~
 
 Danksagung
 ==========

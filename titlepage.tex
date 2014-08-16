@@ -5,6 +5,7 @@
 \define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{prof}[Professor]{}
 \define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{adresse}[Adresse]{}
 \define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{typ}[Typ der Arbeit]{}
+\define@cmdkey{AbschlussarbeitTUWienPhysikTitlePage}{schwarzweisslogo}[TU Logo in Schwarz-Weiss]{}
 \newcommand{\AbschlussarbeitTUWienPhysikTitlePage}[1]{\setkeys{AbschlussarbeitTUWienPhysikTitlePage}{#1}}
 
 % Default Werte für die Variablen
@@ -24,15 +25,17 @@
 	
 	
 	\begin{tabular}{ >{\centering}p{9cm} >{\centering}p{7cm} }
-		\space & {\line(1,0){120}\\Unterschrift Betreuer}
+		\space & {\line(1,0){120}\\Unterschrift BetreuerIn}
 	\end{tabular}
 	
 	\begin{center}
-	
+
 	% Upper part of the page
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.5\textwidth]{figures/TULogo.png}
+\IfEqCase*{\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@schwarzweisslogo}{%
+	{true}{\includegraphics[width=0.5\textwidth]{figures/TU_Wien_Logo_SW.pdf}}%
+	}{\includegraphics[width=0.5\textwidth]{figures/TU_Wien_Logo.pdf}}%
 		 %Logo gracefully taken from http://www.tuwien.ac.at/dle/pr/publishing_web_print/corporate_design/tu_logo/
 	\end{figure}
 	
@@ -57,7 +60,7 @@
 	
 	\vspace{\stretch{1.8}}
 	\begin{large}
-	Ausgeführt am \cmdKV@AbschlussarbeitTUWienPhysikTitlePage@institut \\
+	ausgeführt am \cmdKV@AbschlussarbeitTUWienPhysikTitlePage@institut \\
 	der Technischen Universität Wien
 	
 	\vspace{\stretch{0.5}}
@@ -81,7 +84,7 @@
 	
 	\begin{tabular}{ >{\centering}p{7cm} >{\centering}p{7cm} }
 	\centering
-	\today & \line(1,0){120}
+	\today & \line(1,0){120}\\Unterschrift StudenIn
 	\end{tabular}
 	\end{large}
 	
