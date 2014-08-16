@@ -33,9 +33,9 @@
 	% Upper part of the page
 	\begin{figure}[h]
 		\centering
-\IfEqCase*{\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@schwarzweisslogo}{%
-	{true}{\includegraphics[width=0.5\textwidth]{figures/TU_Wien_Logo_SW.pdf}}%
-	}{\includegraphics[width=0.5\textwidth]{figures/TU_Wien_Logo.pdf}}%
+			\IfStrEq{\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@schwarzweisslogo}{true}%
+			{\includegraphics[width=0.5\textwidth]{figures/TU_Wien_Logo_SW.pdf}}%
+			{\includegraphics[width=0.5\textwidth]{figures/TU_Wien_Logo.pdf}}
 		 %Logo gracefully taken from http://www.tuwien.ac.at/dle/pr/publishing_web_print/corporate_design/tu_logo/
 	\end{figure}
 	
@@ -43,7 +43,7 @@
 	\begin{LARGE}
 
 	\par\noindent%
-	 \IfEqCase*{\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@typ}{%
+	 \IfStrEqCase{\cmdKV@AbschlussarbeitTUWienPhysikTitlePage@typ}{%
 	  {sem}{SEMINARARBEIT}%
 	  {bacc}{BACHELORARBEIT}%
 	  {proj}{PROJEKTARBEIT}%
