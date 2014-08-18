@@ -1,4 +1,5 @@
-\documentclass[12pt,a4paper,twoside,BCOR=10mm,openright,bibliography=totoc]{scrreprt} % Schriftgröße, Seitenformat, Zweiseitig für Seitenränder, Bindcorrection
+\documentclass[12pt,a4paper,twoside,open=right,%
+bibliography=totoc,BCOR=10mm]{scrreprt} % Schriftgröße, Seitenformat, Zweiseitig für Seitenränder, Bindcorrection
 \input{header.tex}
 \input{titlepage.tex}
 \writeIn{german} % Siehe header.tex. Setzt Dokumentsprache und damit Sprache von "Abstract", "Inhaltsverzeichnis", Datumsangaben etc.
@@ -27,18 +28,21 @@
 	schwarzweisslogo=false % Definiert, ob das Logo der TU in Schwarz-Weiß oder Farbe ist.
 	}
 
+\pagenumbering{gobble} % Keine Seitenzahl drucken
 \titlePageTUWienPhysik
-
-\blankpage
 
 \input{abstract.tex}
 \tableofcontents \newpage
-\pagenumbering{arabic} \setcounter{page}{0}
+\cleardoublepage % Macht, dass openright funktioniert.
+% \chapter macht das automatisch, \tableofcontents und \printbibliography machen das nicht.
+% Falls es Probleme gibt hilft auch der Befehl \blankpage (siehe header.tex)
+\pagenumbering{arabic} \setcounter{page}{1}
 
 \input{chapterTippsUndTricks.tex}
 \input{chapterBeispiel.tex}
 
-\pagenumbering{roman} \setcounter{page}{0}
+\cleardoublepage
+\pagenumbering{roman} \setcounter{page}{1}
 \printbibliography
 \input{thanks.tex}
 
