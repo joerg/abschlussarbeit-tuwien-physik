@@ -1,17 +1,13 @@
 \documentclass[12pt,a4paper,twoside,open=right,%
 bibliography=totoc,BCOR=10mm]{scrreprt} % Schriftgröße, Seitenformat, Zweiseitig für Seitenränder, Bindcorrection
 \input{header.tex}
-\writeIn{german} % Siehe header.tex. Setzt Dokumentsprache und damit Sprache von "Abstract", "Inhaltsverzeichnis", Datumsangaben etc.
-\input{titlepage.tex}
-
 \hypersetup{ % Setzt einige Werte die in den Eigenschaften des PDF gespeichert sind.
-	pdfauthor = {Wonderwoman},
-	pdftitle = {Investigation of mysterious invisible planes},
-	pdfsubject = {Diplomarbeit Physik},
-	pdfkeywords = {diplom, master},
 	pdfdisplaydoctitle = true,
 	colorlinks = false, % Für Druck auf "false" setzen!
 }
+\writeIn{german} % Siehe header.tex. Setzt Dokumentsprache und damit Sprache von "Abstract", "Inhaltsverzeichnis", Datumsangaben etc.
+\input{titlepage.tex}
+
 \addbibresource{bib/example.bib}
 
 \begin{document}

@@ -3,6 +3,8 @@
   \input{glyphtounicode.tex}    %Part of modern distribution
   \input{glyphtounicode-cmr.tex}     %Additionnal glyph: You must grab it from pdfx package
   \pdfgentounicode=1
+  \usepackage[a-2u]{pdfx}
+  \pdfomitcharset 1
 \else  %Place here the settings for other compilator
 \fi
 %Encoding + cmap (to get proper UTF8 mapping)
@@ -58,7 +60,8 @@
 
 \newcommand{\writeIn}[1]{\usepackage[#1]{babel}} % Definiert einen neuen Befehl um die Sprache des Dokuments zu setzen
 
-\usepackage[usenames,dvipsnames]{color} % Farben für den todo Befehl
+\PassOptionsToPackage{usenames,dvipsnames}{color}
+\usepackage{color} % Farben für den todo Befehl
 \newcommand{\todo}[1]{{\color{Cerulean}(TODO: #1)}} % Einfach \todo{Text} verwenden!
 
 \newcommand{\blankpage}{ \newpage \thispagestyle{empty} \mbox{} \newpage }
