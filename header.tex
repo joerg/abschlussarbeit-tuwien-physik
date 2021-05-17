@@ -1,5 +1,6 @@
 \usepackage{ifpdf}
 \ifpdf
+  \pdfminorversion=7
   \input{glyphtounicode.tex}    %Part of modern distribution
   \input{glyphtounicode-cmr.tex}     %Additionnal glyph: You must grab it from pdfx package
   \pdfgentounicode=1
@@ -60,6 +61,7 @@
 
 \newcommand{\writeIn}[1]{\usepackage[#1]{babel}} % Definiert einen neuen Befehl um die Sprache des Dokuments zu setzen
 
+\usepackage{colorprofiles}
 \PassOptionsToPackage{usenames,dvipsnames}{color}
 \usepackage{color} % Farben für den todo Befehl
 \newcommand{\todo}[1]{{\color{Cerulean}(TODO: #1)}} % Einfach \todo{Text} verwenden!
