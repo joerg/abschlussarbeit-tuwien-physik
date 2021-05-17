@@ -1,10 +1,9 @@
 \usepackage{ifpdf}
 \ifpdf
-  \pdfminorversion=7
   \input{glyphtounicode.tex}    %Part of modern distribution
   \input{glyphtounicode-cmr.tex}     %Additionnal glyph: You must grab it from pdfx package
   \pdfgentounicode=1
-  \usepackage[a-2u]{pdfx}
+  \usepackage[a-2u,pdf17]{pdfx}
   \pdfomitcharset 1
 \else  %Place here the settings for other compilator
 \fi
