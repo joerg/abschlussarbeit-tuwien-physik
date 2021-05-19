@@ -1,3 +1,16 @@
+\usepackage{ifpdf}
+\ifpdf
+  \input{glyphtounicode.tex}    %Part of modern distribution
+  \input{glyphtounicode-cmr.tex}     %Additionnal glyph: You must grab it from pdfx package
+  \pdfgentounicode=1
+  \pdfinterwordspaceon
+  \usepackage[a-2u,pdf17]{pdfx}
+  \pdfomitcharset 1
+\else  %Place here the settings for other compilator
+\fi
+%Encoding + cmap (to get proper UTF8 mapping)
+%------------------------------------------------------
+\usepackage{cmap}
 \usepackage[utf8]{inputenc} % Richtiges anzeigen von Umlauten und quasi allen anderen Schriftzeichen
 \usepackage[T1]{fontenc} % Wichtig für alles was mehr als ASCII verwendet
 \usepackage{csquotes} % Schöne Anführungsstriche mit \enquote{Text}
@@ -6,6 +19,13 @@
 \usepackage{amstext} % \text{} Macro in mathematischen Formeln
 \usepackage{amsfonts} % Erweiterte Zeichensätze für mathematische Formeln
 \usepackage{amssymb} % Spezielle mathematische Symbole.
+%Correct UTF8 mapping for ams fonts
+\ifdefined\pdffontattr% \ifdefined is part of the e-TeX extension, which is part of any modern LaTeX compiler.
+    \immediate\pdfobj stream file {umsa.cmap}
+    {\usefont{U}{msa}{m}{n}\pdffontattr\font{/ToUnicode \the\pdflastobj\space 0 R}}
+    \immediate\pdfobj stream file {umsb.cmap}
+    {\usefont{U}{msb}{m}{n}\pdffontattr\font{/ToUnicode \the\pdflastobj\space 0 R}}
+\fi
 \usepackage{array} % Matrizen in mathematischen Formeln
 \usepackage{textcomp} % Für textmu und textohm etc. um im Fließtext keine Mathematik 
 \usepackage{textalpha} % Damit können griechische Zeichen direkt im Text verwendet werden (siehe zeichen.txt)
@@ -41,7 +61,9 @@
 
 \newcommand{\writeIn}[1]{\usepackage[#1]{babel}} % Definiert einen neuen Befehl um die Sprache des Dokuments zu setzen
 
-\usepackage[usenames,dvipsnames]{color} % Farben für den todo Befehl
+\usepackage{colorprofiles}
+\PassOptionsToPackage{usenames,dvipsnames}{color}
+\usepackage{color} % Farben für den todo Befehl
 \newcommand{\todo}[1]{{\color{Cerulean}(TODO: #1)}} % Einfach \todo{Text} verwenden!
 
 \newcommand{\blankpage}{ \newpage \thispagestyle{empty} \mbox{} \newpage }
